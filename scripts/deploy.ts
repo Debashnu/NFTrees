@@ -4,6 +4,8 @@ async function main() {
   const [deployer] = await ethers.getSigners();
 
   console.log("Deploying EduNFT with account:", deployer.address);
+  console.log(`Deploying from address: ${deployer.address}`);
+
 
   const EduNFT = await ethers.getContractFactory("EduNFT");
   const eduNFT = await EduNFT.deploy(deployer.address); // Pass deployer's address
